@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Input = ({ secretWord }) => {
+const Input = ({ success, secretWord }) => {
   const [currentGuess, setCurrentGuess] = React.useState('');
+
+  if (success) {
+    return <div data-test="component-input" />;
+  }
 
   return (
     <div data-test="component-input">
@@ -14,7 +18,16 @@ const Input = ({ secretWord }) => {
           value={currentGuess}
           onChange={(event) => setCurrentGuess(event.target.value)}
         />
-        <button data-test="submit-button" className="btn btn-primary mb-2">
+        <button
+          data-test="submit-button"
+          className="btn btn-primary mb-2"
+          onClick={(event) => {
+            event.preventDefault();
+            setCurrentGuess('');
+          }}
+          // TODO: update guessedWords
+          // TODO: check against secretWord and update success
+        >
           Submit
         </button>
       </form>
