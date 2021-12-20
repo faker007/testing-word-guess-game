@@ -34,4 +34,19 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
 - Provide return values
   - Set up test conditions
 
-###
+### Method for Mocking Methods in Jest
+
+- Reset properties on React module to replace methods with mocks
+  - Will go into more detail on this later
+- This means: no destructuring on imports in non-test code
+
+### currentGuess State
+
+- Local state for Input called `currentGuess` with `useState` hook
+  - no other components need it
+- Update `currentGuess` state on field change (state-controlled)
+- In future lectures:
+  - clear `currentGuess` state on submit
+  - update `guessWords` shared state
+    - `Redux` or `React contenxt`
+  - check `currentGuess` against secretWord
