@@ -18,3 +18,20 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
 
 - There's no need for PropTypes if you're using `Typescript`
 - use Typescript's `interface`
+
+### What is a mock function
+
+- Fake function that runs instead of a real function
+  - Can run alternate code, or just act as a placeholder
+- Jest replaces real function with mock
+
+### Why Mock?
+
+- Mock serve three purposes
+- Keep real function from running
+  - Prevent side-effects like network calls
+- Spy on function to see when it's called
+- Provide return values
+  - Set up test conditions
+
+###
