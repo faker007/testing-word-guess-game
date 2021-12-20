@@ -50,3 +50,12 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
   - update `guessWords` shared state
     - `Redux` or `React contenxt`
   - check `currentGuess` against secretWord
+
+### Notes on mocking useState
+
+- Destructure `useState` on import
+  - props: cleaner production code
+  - cons: test code more complicated
+- Multiple `useState` statements?
+  - Option 1: useReducer, discussed in future lecture
+  - Option 2: skip unit tests and got straight to functional tests(E2E)
