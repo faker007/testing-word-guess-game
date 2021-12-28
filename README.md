@@ -59,3 +59,40 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
 - Multiple `useState` statements?
   - Option 1: useReducer, discussed in future lecture
   - Option 2: skip unit tests and got straight to functional tests(E2E)
+
+### Testing asynchronous functions
+
+- `getSecretWord` returns `promise`
+- Put assertions in `.then()` callback after running `getSecretWord()`
+  - Assertion will run after `promise` resolves
+
+### So Much Asynchronicity!
+
+- `moxios.wait()` is alos asynchronous
+- More important then ever to see test fails
+- Very eazy for tests to complete before async
+
+### Mocking Modules in Jest
+
+- Before, we mocked pieces of modules individually: React.useState
+- That was done test-file-by-test-file
+  - reasonable: sometimes wanted to mack, sometimes didn't
+- We are going to want to mock the `getSecretWord` action everywhere
+  - never want to go across the network except maybe for e2e
+- For this: mock the module globally
+
+### Intro to Shared State
+
+- Shared State is used for props needed by lots of components
+  - Global settings (Languages, visual theme)
+- Deeply nested components need access but ancestors don't
+
+### React Context vs. Redux
+
+- Simple apps: Context works great
+- Redux has better tools for more sophisticated apps:
+  - optimization for high frequency updates
+  - rich ecosystem for developers
+    - tools for debugging
+  - middleware for automatic code upon any action
+    - for example, logging events to analytics pipelines
