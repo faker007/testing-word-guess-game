@@ -113,3 +113,13 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
   - Controls `success` piece of state
   - Start with value of `false`
   - Flip `success` to `true` upon `CORRECT_GUESS` action
+
+### successReducer Tests
+
+- Reducer is function (previousState, action) => newState
+- Undefined state
+  - return expected initial state (false)
+- Unknown action
+  - return whatever state was passed in as an argument
+- `CORRECT_GUESS` action type
+  - return `true`
