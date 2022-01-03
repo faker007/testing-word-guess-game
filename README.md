@@ -96,3 +96,12 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
     - tools for debugging
   - middleware for automatic code upon any action
     - for example, logging events to analytics pipelines
+
+### Note on Artifcie
+
+- Jotto is too simple to need shared state
+- Only two levels of components
+  - keep state at App level
+  - pass state and setters and prop
+- Simple app for learning
+  - shared state is artificial
