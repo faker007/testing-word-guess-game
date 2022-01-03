@@ -105,3 +105,11 @@ React 테스팅 도구인 Jest와 Enzyme에 대해서 배워요! 🎉
   - pass state and setters and prop
 - Simple app for learning
   - shared state is artificial
+
+### success State Planning
+
+- Action creator `CORRECT_GUESS` action
+- Success reudcer
+  - Controls `success` piece of state
+  - Start with value of `false`
+  - Flip `success` to `true` upon `CORRECT_GUESS` action
